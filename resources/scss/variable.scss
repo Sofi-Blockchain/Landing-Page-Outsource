@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;900&display=swap');
+@font-face {
+  font-family: DFVN-Afronaut;
+  src: url(/public/assets/fonts/dfvn-afronaut.otf) format('opentype');
+}
+
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
+$xl: 1440px;
+
+$bg-light: #fff;
+$bg-dark: #000;
+$text-light: #000;
+$text-dark: #fff;
+$primary: #dbc69d;
+$gradient-primary: linear-gradient(270deg, #dbc69d 0%, #fcecd0 94.12%);
+
+$dfvna: DFVN-Afronaut;
+
+@mixin breakpoint($point) {
+  @if $point==xl {
+    @media (max-width: ($xl - 1)) {
+      @content;
+    }
+  }
+
+  @if $point==lg {
+    @media (max-width: ($lg - 1)) {
+      @content;
+    }
+  }
+
+  @if $point==md {
+    @media (max-width: ($md - 1)) {
+      @content;
+    }
+  }
+
+  @if $point==sm {
+    @media (max-width: ($sm - 1)) {
+      @content;
+    }
+  }
+
+  @if $point==xs {
+    @media (max-width: ($xs - 1)) {
+      @content;
+    }
+  }
+}
+
+:root {
+  --speed: 12s;
+  --orbit-play-state: running;
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-bottom-offset: 0;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: #f784ad;
+}
